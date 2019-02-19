@@ -1,6 +1,10 @@
 MODULES_MANAGER_V2
-Flame.__init__|D:\TFG\__flame\Workspace\Flame\Flame\__init__.py
-Flame.settings|D:\TFG\__flame\Workspace\Flame\Flame\settings.py
-Flame.urls|D:\TFG\__flame\Workspace\Flame\Flame\urls.py
-Flame.wsgi|D:\TFG\__flame\Workspace\Flame\Flame\wsgi.py
-manage|D:\TFG\__flame\Workspace\Flame\manage.py
+Flame.__init__|D:\Git\__flame\Workspace\Flame\Flame\__init__.py
+Flame.settings|D:\Git\__flame\Workspace\Flame\Flame\settings.py
+Flame.urls|D:\Git\__flame\Workspace\Flame\Flame\urls.py
+Flame.wsgi|D:\Git\__flame\Workspace\Flame\Flame\wsgi.py
+Scraping.Lefties|D:\Git\__flame\Workspace\Flame\Scraping\Lefties.py
+Scraping.Lefties02|D:\Git\__flame\Workspace\Flame\Scraping\Lefties02.py
+Scraping.Lefties03|D:\Git\__flame\Workspace\Flame\Scraping\Lefties03.py
+Scraping.__init__|D:\Git\__flame\Workspace\Flame\Scraping\__init__.py
+manage|D:\Git\__flame\Workspace\Flame\manage.py
