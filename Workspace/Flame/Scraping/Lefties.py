@@ -18,7 +18,7 @@ urlLefties = "https://www.lefties.com/es/#woman"
 def obtener_prenda(urlPrenda):
     req = requests.get(urlPrenda)
     data = req.text
-    soup = BeautifulSoup(data,'html.parser')
+    get_html = BeautifulSoup(data,'html.parser')
     
     prenda = []
     return prenda
@@ -27,21 +27,21 @@ def obtener_prenda(urlPrenda):
 def obtener_todas_las_prendas(urlWeb):
     req = requests.get(urlWeb)
     data = req.text
-    soup = BeautifulSoup(data,'html.parser')
+    get_html = BeautifulSoup(data,'html.parser')
     
     res = [] # almacenamos las URLS
     
-#     for i in soup.find_all("script", type="text/javascript"):
+#     for i in get_html.find_all("script", type="text/javascript"):
 #         print i
 #         print ("=======================================")
-#     script = soup.html.find_next_sibling('script', re.compile(r"\$\(document\)\.ready"))
+#     script = get_html.html.find_next_sibling('script', re.compile(r"\$\(document\)\.ready"))
 #     pattern = re.compile("(\w+): '(.*?)'")
 #     fields = dict(re.findall(pattern, script.text))
 #     print fields['woman']
     
     #"sidemenu-list-item new-collection parent"
     #"sidemenu-list-item"
-    for i in soup.find_all(class_="sidemenu-list-item new-collection parent"):
+    for i in get_html.find_all(class_="sidemenu-list-item new-collection parent"):
         print (i.gettext())
       
     for r in res:
@@ -56,11 +56,11 @@ obtener_todas_las_prendas(urlLefties)
 def obtener_prenda_lefties(urlPrenda):
     req = requests.get(urlPrenda)
     data = req.text
-    soup = BeautifulSoup(data,'html.parser')
+    get_html = BeautifulSoup(data,'html.parser')
     
     res = []
     
-    for j in soup.find_all("script", type="application/ld+json"):
+    for j in get_html.find_all("script", type="application/ld+json"):
         prenda = j.get_text().split(",")
         
         res.append(prenda[3])
