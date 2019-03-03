@@ -3,38 +3,51 @@ Created on 9 feb. 2019
 
 @author: inmam
 '''
-from bs4 import BeautifulSoup
-from selenium import webdriver;import time
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from Scraping.Frameworks import Soup
 
 urlLefties = "https://www.lefties.com/es/#woman"
 
-driver = webdriver.Chrome("C:\Drivers\chromedriver.exe")
-driver.implicitly_wait(30)
-driver.get(urlLefties)
 
-soup = BeautifulSoup(driver.page_source, 'lxml')
 
-# for item in soup.find_all(class_="sidemenu-list-item parent"):#, attrs="href"): ## ENLACES
+
+
+# for item in get_html.find_all(class_="sidemenu-list-item parent"):#, attrs="href"): ## ENLACES
 #     print(item.get('a').get('href'))
 
-def obtener_enlaces_Lefties():
+def obtener_enlaces_Lefties(url):
     
     res = []
+    get_html = Soup.get_html(url)
 
-    for item in soup.find_all("li", attrs={"class":"sidemenu-list-item parent"}):
+    for item in get_html.find_all("li", attrs={"class":"sidemenu-list-item parent"}):
         for a in item.find_all("a"):
             nombre = a.get_text()
             enlace = a.get('href')
-            res.append([nombre,enlace])
+            if(('/es/women/') in enlace):
+                res.append(['WOMEN',nombre,enlace])
+            if(('/es/men/') in enlace):
+                res.append(['MEN',nombre,enlace])
             
 
     for i in res: print(i)
     return res;
 
-obtener_enlaces_Lefties()
+def obtener_prendas(urlCategoria):
+    
+    res = []
+    get_html = Soup.get_html(urlCategoria)
+    
+    for item in get_html.find_all(class_="grid-product-standard grid-product2"): # sacamos la url de la prenda
+        enlace_prenda = item['href']
+        get_html_prenda = Soup.get_html(enlace_prenda) # --> enlace a la prenda funciona
+#         for prenda in get_html_prenda
+        
+    return res
+
+###################################################################################################################################
+
+# obtener_enlaces_Lefties(urlLefties)
+obtener_prendas('https://www.lefties.com/es/women/last-trends/ne%C3%B3n-animal-c1030170005.html')
         
 
 # for items in wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".sidemenu-list-item"))):
@@ -42,8 +55,8 @@ obtener_enlaces_Lefties()
 #     link.click()
 #     time.sleep(2)
 # 
-# soup = BeautifulSoup(driver.page_source,"lxml")
-# print(soup)
+# get_html = BeautifulSoup(driver.page_source,"lxml")
+# print(get_html)
 
 # for item in wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".sidemenu-list-item"))):
 #     link = item.get_attribute("href")

@@ -1,26 +1,25 @@
 -- VERSION_5
 -- START DISKCACHE_2
 D:\Git\__flame\Workspace\.metadata\.plugins\org.eclipse.core.resources\.projects\Flame\com.python.pydev.analysis\v2_indexcache
-Scraping.Lefties03|1549826770748451000|D:\Git\__flame\Workspace\Flame\Scraping\Lefties03.py
+Scraping.Frameworks.Soup|1550608748280509000|D:\Git\__flame\Workspace\Flame\Scraping\Frameworks\Soup.py
 Flame.__init__|1539112129755601000|D:\Git\__flame\Workspace\Flame\Flame\__init__.py
 Scraping.Lefties02|1548793975683517000|D:\Git\__flame\Workspace\Flame\Scraping\Lefties02.py
 Flame.urls|1539112129771208000|D:\Git\__flame\Workspace\Flame\Flame\urls.py
-Scraping.Lefties|1548703253909539000|D:\Git\__flame\Workspace\Flame\Scraping\Lefties.py
+Scraping.Lefties|1550605408356105000|D:\Git\__flame\Workspace\Flame\Scraping\Lefties.py
 Flame.settings|1539112129755601000|D:\Git\__flame\Workspace\Flame\Flame\settings.py
-Scraping.__init__|1539265362527950000|D:\Git\__flame\Workspace\Flame\Scraping\__init__.py
 Flame.wsgi|1539112129771208000|D:\Git\__flame\Workspace\Flame\Flame\wsgi.py
 manage|1539112129771208000|D:\Git\__flame\Workspace\Flame\manage.py
 -- END DISKCACHE
 -- START DICTIONARY
 14
 11=D:\Git\__flame\Workspace\Flame\Flame\urls.py
-8=Scraping.Lefties03
 1=D:\Git\__flame\Workspace\Flame\Flame\settings.py
 6=Scraping.Lefties02
 14=Client.__init__
 9=D:\Git\__flame\Workspace\Flame\Scraping\Lefties.py
-7=D:\Git\__flame\Workspace\Flame\Scraping\Lefties03.py
+8=Scraping.Frameworks.Soup
 5=D:\Git\__flame\Workspace\Flame\Scraping\Lefties02.py
+7=D:\Git\__flame\Workspace\Flame\Scraping\Frameworks\Soup.py
 12=Flame.urls
 10=Scraping.Lefties
 3=D:\Git\__flame\Workspace\Flame\Flame\wsgi.py
@@ -36,24 +35,24 @@ app|1|application!3^28#1*35@
 cli|2|Client!5^8#7*49@client_response!5^21#1*51@
 dat|1|DATABASES!1^22#1*19@
 deb|1|DEBUG!1^3#1*19@
-dri|1|driver!7^14#1*67@
+get|1|get_html!7^11#5*66@
 ins|1|INSTALLED_APPS!1^127#1*19@
 lan|1|LANGUAGE_CODE!1^36#1*19@
 log|1|LOGGING!1^158#1*19@
 man|1|MANAGERS!1^10#1*19@
 med|2|MEDIA_URL!1^58#1*19@MEDIA_ROOT!1^53#1*19@
 mid|1|MIDDLEWARE_CLASSES!1^103#1*19@
-obt|4|obtener_prenda!9^18#5*82@obtener_todas_las_prendas!9^27#5*82@obtener_enlaces_Lefties!7^23#5*66@obtener_prenda_lefties!9^56#5*82@
+obt|3|obtener_prenda!9^18#5*82@obtener_todas_las_prendas!9^27#5*82@obtener_prenda_lefties!9^56#5*82@
 pre|3|prendaZara!9^12#1*83@prendaLefties!9^10#1*83@prendaHM!9^11#1*83@
 roo|1|ROOT_URLCONF!1^105#1*19@
 sec|1|SECRET_KEY!1^86#1*19@
+sel|1|seleniumFramework!7^5#5*66@
 ses|1|SESSION_SERIALIZER!1^129#1*19@
 sit|1|SITE_ID!1^38#1*19@
-sou|1|soup!7^18#1*67@
 sta|4|STATICFILES_FINDERS!1^83#1*19@STATIC_URL!1^68#1*19@STATIC_ROOT!1^64#1*19@STATICFILES_DIRS!1^75#1*19@
 tem|3|TEMPLATE_DEBUG!1^4#1*19@TEMPLATE_DIRS!1^114#1*19@TEMPLATE_LOADERS!1^93#1*19@
 tim|1|TIME_ZONE!1^32#1*19@
-url|4|urlpatterns!11^17#1*99@urlLefties!9^14#1*83@url!5^20#1*51@urlLefties!7^12#1*67@
+url|3|urlpatterns!11^17#1*99@urlLefties!9^14#1*83@url!5^20#1*51@
 use|3|USE_L10N!1^46#1*19@USE_I18N!1^42#1*19@USE_TZ!1^49#1*19@
 wsg|1|WSGI_APPLICATION!1^108#1*19@
 -- END TREE
