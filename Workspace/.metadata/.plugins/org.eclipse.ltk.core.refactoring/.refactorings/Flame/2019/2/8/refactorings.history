@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Flame/Scraping/Selenium&apos; to &apos;SeleniumFramework&apos;" description="Rename resource &apos;Selenium&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Scraping/Selenium" name="SeleniumFramework" stamp="1550604869414" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Flame/Scraping/SeleniumFramework&apos; to &apos;Frameworks&apos;" description="Rename resource &apos;SeleniumFramework&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Scraping/SeleniumFramework" name="Frameworks" stamp="1550604894011" updateReferences="true"/>
-</session>
