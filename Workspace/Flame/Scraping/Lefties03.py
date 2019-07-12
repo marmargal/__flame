@@ -5,14 +5,8 @@ Created on 9 feb. 2019
 '''
 from Scraping.Frameworks import Soup
 
+
 urlLefties = "https://www.lefties.com/es/#woman"
-
-
-
-
-
-# for item in get_html.find_all(class_="sidemenu-list-item parent"):#, attrs="href"): ## ENLACES
-#     print(item.get('a').get('href'))
 
 def obtener_enlaces_Lefties(url):
     
@@ -28,46 +22,53 @@ def obtener_enlaces_Lefties(url):
             if(('/es/men/') in enlace):
                 res.append(['MEN',nombre,enlace])
             
+    return res
 
-    for i in res: print(i)
-    return res;
-
-def obtener_prendas(urlCategoria):
+def obtener_enlace_prendas(urlCategoria):
     
     res = []
     get_html = Soup.get_html(urlCategoria)
     
     for item in get_html.find_all(class_="grid-product-standard grid-product2"): # sacamos la url de la prenda
         enlace_prenda = item['href']
-        get_html_prenda = Soup.get_html(enlace_prenda) # --> enlace a la prenda funciona
-#         for prenda in get_html_prenda
+        res.append(enlace_prenda)
         
+#     for i in res: print(i)
     return res
+
+#     for item in get_html_prenda.find_all(attrs={"id":"product-container"}):
+#         print(item)
+#         images =  item.find_all("img", attrs={"class":"product-image"})
+#         for i in images: print(i['src'])
+# #         print(images)
+
+def obtener_detalles_prenda(urlPrenda): #                     NO FUNCIONA!!!!!!
+    
+    res = []
+    get_html_prenda = Soup.get_html(urlPrenda) 
+    
+    
+    
+#     for img in get_html_prenda.find(attrs={"id":"product-image-container"}):
+#         images = img.find_all('img')
+    
+    for prenda in get_html_prenda.find(attrs={"id":"product-info-container"}):
+        name = prenda.find("info-name").text
+        print(name)
+        
+        
+#     print(images)
+#     for i in images: print(i)
+    return res;
+
+obtener_detalles_prenda('https://www.lefties.com/es/women/colecci%C3%B3n/vestidos-y-monos/vestido-asim%C3%A9trico-c1029510p501376839.html?colorId=800')
 
 ###################################################################################################################################
 
-# obtener_enlaces_Lefties(urlLefties)
-obtener_prendas('https://www.lefties.com/es/women/last-trends/ne%C3%B3n-animal-c1030170005.html')
-        
+# for enlace in obtener_enlaces_Lefties(urlLefties):
+#     for enlacePrenda in obtener_enlace_prendas(enlace[2]):
+#         print(enlacePrenda)
 
-# for items in wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".sidemenu-list-item"))):
-#     link = items.find_element_by_css_selector(".reviewdata a")
-#     link.click()
-#     time.sleep(2)
-# 
-# get_html = BeautifulSoup(driver.page_source,"lxml")
-# print(get_html)
 
-# for item in wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, ".sidemenu-list-item"))):
-#     link = item.get_attribute("href")
-#     link.click()
-#     time.sleep(2)
-#     
-#     print(link)
-
-#     name = item.find_element_by_css_selector("p a").text
-#     review_title = item.find_element_by_css_selector("strong a[id^=ctl00_ctl00_ContentPlaceHolderFooter_ContentPlaceHolderBody_rptreviews]").text
-#     review_data = ' '.join([' '.join(items.text.split()) for items in item.find_elements_by_css_selector(".reviewdata")])
-#     print("Name: {}\nReview_Title: {}\nReview_Data: {}\n".format(name, review_title, review_data))
-
-# driver.quit()
+# for item in get_html.find_all(class_="sidemenu-list-item parent"):#, attrs="href"): ## ENLACES
+#     print(item.get('a').get('href'))
